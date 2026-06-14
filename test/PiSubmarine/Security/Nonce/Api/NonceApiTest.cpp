@@ -1,13 +1,13 @@
 #include <gtest/gtest.h>
 
+#include "PiSubmarine/Security/Api/Nonce.h"
 #include "PiSubmarine/Security/Nonce/Api/ErrorCode.h"
-#include "PiSubmarine/Security/Nonce/Api/Nonce.h"
 
 namespace PiSubmarine::Security::Nonce::Api
 {
     TEST(NonceApiTest, NonceStoresOpaqueBytes)
     {
-        const Nonce nonce{.Value = {std::byte{0xAA}, std::byte{0xBB}, std::byte{0xCC}}};
+        const ::PiSubmarine::Security::Api::Nonce nonce{.Value = {std::byte{0xAA}, std::byte{0xBB}, std::byte{0xCC}}};
 
         ASSERT_EQ(nonce.Value.size(), 3U);
         EXPECT_EQ(nonce.Value[0], std::byte{0xAA});

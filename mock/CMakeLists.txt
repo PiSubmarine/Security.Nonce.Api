@@ -4,7 +4,7 @@ find_package(GTest CONFIG REQUIRED)
 
 message("Adding interface library: ${PISUBMARINE_MODULE_NAME}.Mock")
 add_library(${PISUBMARINE_MODULE_NAME}.Mock INTERFACE
-        PiSubmarine/Security/Nonce/Api/IProviderMock.h)
+        PiSubmarine/Security/Api/INonceProviderMock.h)
 target_include_directories(${PISUBMARINE_MODULE_NAME}.Mock INTERFACE "./")
 PiSubmarineInitTarget(${PISUBMARINE_MODULE_NAME}.Mock)
 

@@ -3,7 +3,7 @@
 #include <cstddef>
 #include <vector>
 
-namespace PiSubmarine::Security::Nonce::Api
+namespace PiSubmarine::Security::Api
 {
     struct Nonce
     {
